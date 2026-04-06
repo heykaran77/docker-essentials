@@ -4,7 +4,7 @@ const port = process.env.PORT || 4000;
 app.get("/", (req, res) => {
     return res.json({
         success: true,
-        message: "Hello World from Express and TypeScript!",
+        message: "Hello from docker 🐳!",
     });
 });
 app.listen(port, () => {

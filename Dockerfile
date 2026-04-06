@@ -14,7 +14,7 @@ RUN npm install typescript
 COPY main.ts tsconfig.json ./
 
 # Compile TypeScript to JavaScript
-RUN npx tsc
+RUN npm run build
 
 
 # Stage 2: Runtime
@@ -35,4 +35,4 @@ COPY --from=builder /app/main.js .
 EXPOSE 4000
 
 # Run the compiled JavaScript
-CMD ["node", "main.js"]
+CMD ["npm", "start"]
